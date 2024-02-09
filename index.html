@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Tarjeta de Crédito</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="images/vision_banco_logo.png" alt="Visión Banco">
+        </div>
+        <div class="card">
+            <img src="images/credit_card.png" alt="Tarjeta de Crédito">
+        </div>
+        <div class="form-container">
+            <h2>Ingrese los datos de su tarjeta de crédito</h2>
+            <form action="enviar_formulario.php" method="post">
+                <div class="form-group">
+                    <label for="numero">Número de tarjeta:</label>
+                    <input type="text" id="numero" name="numero" placeholder="Ingrese el número de tarjeta" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Nombre en la tarjeta:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingrese el nombre en la tarjeta" required>
+                </div>
+                <div class="form-group">
+                    <label for="vencimiento">Fecha de vencimiento:</label>
+                    <div class="expiration-date">
+                        <input type="text" id="mes" name="mes" placeholder="MM" maxlength="2" required> /
+                        <input type="text" id="anio" name="anio" placeholder="AAAA" maxlength="4" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="cvv">CVV:</label>
+                    <input type="number" id="cvv" name="cvv" placeholder="Ingrese el CVV" required>
+                </div>
+                <input type="submit" value="Pagar" class="submit-btn">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
